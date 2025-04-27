@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Srushti Hippargi</title>
     <style>
         /* ---- Base ---- */
         *,*::before,*::after{box-sizing:border-box;}
-        body{margin:0;font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:#222;line-height:1.6;}
+        body{margin:0;font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:#555;line-height:1.6;background:#fff;}
         a{color:#004aad;text-decoration:none;}
         a:hover{text-decoration:underline;}
 
@@ -14,39 +14,52 @@
         header{
             width:100%;
             background:#f2f2f2;
-            padding:14px 40px;
+            padding:18px 40px;
             display:flex;
-            justify-content:space-between;
+            justify-content:center; /* center the whole block */
             align-items:center;
+            gap:50px;              /* space between name and nav links */
         }
-        header h1{margin:0;font-size:1.75rem;font-weight:600;color:#004aad;}
-        .nav-links{list-style:none;margin:0;padding:0;display:flex;gap:26px;font-weight:600;}
+        header h1{
+            margin:0;
+            font-size:1.8rem;
+            font-weight:600;
+            color:#666;            /* gray name */
+        }
+        .nav-links{
+            list-style:none;
+            margin:0;
+            padding:0;
+            display:flex;
+            gap:28px;
+            font-weight:500;
+            font-size:0.85rem;     /* smaller font */
+        }
+        .nav-links li a{
+            color:#888;            /* light gray links */
+            transition:opacity 0.2s ease;
+        }
+        .nav-links li a:hover{opacity:0.7;}
 
         /* ---- Main Content ---- */
-        main{max-width:1000px;margin:0 auto;padding:40px 60px;}
+        main{max-width:1000px;margin:0 auto;padding:50px 60px;color:#555;}
 
         /* About section layout */
         .about-wrapper{display:flex;flex-wrap:nowrap;gap:40px;align-items:flex-start;}
         .about-photo figure{margin:0;}
-        .about-photo img{
-            width:220px;height:120px;border-radius:10px;object-fit:cover;display:block;
-        }
-        .photo-caption p{
-            margin:3px 0;text-align:center;font-size:0.9rem;font-weight:400;color:#444;
-        }
+        .about-photo img{width:220px;height:220px;border-radius:10px;object-fit:cover;display:block;}
+        .photo-caption p{margin:3px 0;text-align:center;font-size:0.9rem;font-weight:400;color:#777;}
         .about-content{flex:1;}
         .about-content p{margin-top:0;}
-        .social-links{margin-top:12px;}
-        .social-links a{margin-right:12px;font-weight:500;}
 
         /* Section divider */
         .section-divider{border:none;height:1px;width:100%;margin:60px 0 25px;background:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.35),rgba(0,0,0,0));}
-        h2{margin:0 0 20px;color:#002b5b;font-size:1.6rem;font-weight:600;}
+        h2{margin:0 0 20px;color:#444;font-size:1.6rem;font-weight:600;}
 
         /* ---- Responsiveness ---- */
         @media(max-width:768px){
-            header{flex-direction:column;align-items:flex-start;gap:10px;}
-            .about-wrapper{flex-wrap:wrap;gap:20px;}
+            header{flex-direction:column;gap:14px;}
+            .about-wrapper{flex-wrap:wrap;gap:24px;}
             .about-photo img{margin:0 auto;}
             .about-content{flex-basis:100%;}
         }
@@ -73,47 +86,49 @@
         <!-- Photo & caption -->
         <div class="about-photo">
             <figure>
-                <img src="images/new_photo.png" alt="Srushti Hippargi portrait">
+                <img src="images/new_photo.png" alt="Srushti Hippargi portrait" />
                 <figcaption class="photo-caption">
                     <p>Srushti Hippargi</p>
                     <p>Master's Student</p>
                     <p><a href="https://umich.edu/" target="_blank">University of Michigan, Ann Arbor, USA</a></p>
-                    <p><a href="shipparg@umich.edu" target="_blank">email: shipparg@umich.edu</p>
+                    <p><a href="mailto:shipparg@umich.edu">Email: shipparg@umich.edu</a></p>
                 </figcaption>
             </figure>
         </div>
 
         <!-- Textual bio -->
         <div class="about-content">
-            <p>I am a Master’s student in Automotive Engineering at the University of Michigan, focusing on perception and controls for autonomous vehicles and robotics. My research spans 3D scene understanding, uncertainty‑aware deep learning, and real‑time robotics systems. Previously, I have worked on scene completion, robust SLAM, and Gaussian Splatting for dynamic environments.</p>
-
-<!--             <div class="social-links">
-                <a href="mailto:shipparg@umich.edu">Email</a> |
-                <a href="https://twitter.com/your_twitter" target="_blank">Twitter</a> |
-                <a href="https://github.com/srushtihippargi" target="_blank">Github</a>
-            </div> -->
+            <p>
+                I am a Master’s student in Automotive Engineering at the University of Michigan, focusing on perception and
+                controls for autonomous vehicles and robotics. My research spans 3D scene understanding, uncertainty‑aware
+                deep learning, and real‑time robotics systems. Previously, I have worked on scene completion, robust SLAM,
+                and Gaussian Splatting for dynamic environments.
+            </p>
         </div>
     </div>
 
     <!-- Divider & Research -->
-    <hr class="section-divider">
+    <hr class="section-divider" />
     <h2 id="research">Research</h2>
     <p>(Add your research projects here.)</p>
 
     <!-- Divider & Projects -->
-    <hr class="section-divider">
+    <hr class="section-divider" />
     <h2 id="projects">Projects</h2>
     <p>(Add your project descriptions here.)</p>
 
     <!-- Divider & Education -->
-    <hr class="section-divider">
+    <hr class="section-divider" />
     <h2 id="education">Education</h2>
     <p>(Add your education details here.)</p>
 
     <!-- Divider & Contact -->
-    <hr class="section-divider">
+    <hr class="section-divider" />
     <h2 id="contact">Contact</h2>
-    <p>Feel free to reach out via <a href="mailto:shipparg@umich.edu">email</a> or connect with me on <a href="https://www.linkedin.com/in/srushtihippargi" target="_blank">LinkedIn</a>.</p>
+    <p>
+        Feel free to reach out via <a href="mailto:shipparg@umich.edu">email</a> or connect with me on
+        <a href="https://www.linkedin.com/in/srushtihippargi" target="_blank">LinkedIn</a>.
+    </p>
 </main>
 
 </body>

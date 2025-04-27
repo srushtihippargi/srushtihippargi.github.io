@@ -11,42 +11,21 @@
         a:hover{text-decoration:underline;}
 
         /* ---- Header ---- */
-        header{
-            width:100%;
-            background:#f2f2f2;
-            border-bottom:1px solid #e7e7e7;
-        }
+        header{width:100%;background:#f2f2f2;border-bottom:1px solid #e7e7e7;}
         .header-inner{
-            max-width:1000px;             /* align to content grid */
-            margin:0 auto;                /* center the inner flexbox */
-            padding:10px 20px;            /* smaller height */
-            display:flex;
-            align-items:center;
-            justify-content:space-between;/* name left, nav right */
+            max-width:1000px;             /* shared column width */
+            margin:0 auto;                /* center column */
+            padding:10px 20px;            /* horizontal gutters = 20px */
+            display:flex;align-items:center;justify-content:space-between;
         }
-        header h1{
-            margin:0;
-            font-size:1.6rem;              /* slightly smaller */
-            font-weight:600;
-            color:#666;                    /* gray name */
-        }
-        .nav-links{
-            list-style:none;
-            margin:0;
-            padding:0;
-            display:flex;
-            gap:24px;
-            font-weight:500;
-            font-size:0.85rem;
-        }
-        .nav-links li a{
-            color:#888;                    /* light gray links */
-            transition:opacity 0.2s ease;
-        }
+        header h1{margin:0;font-size:1.6rem;font-weight:600;color:#666;}
+        .nav-links{list-style:none;margin:0;padding:0;display:flex;gap:24px;font-weight:500;font-size:0.85rem;}
+        .nav-links li a{color:#888;transition:opacity 0.2s ease;}
         .nav-links li a:hover{opacity:0.7;}
 
         /* ---- Main Content ---- */
-        main{max-width:1000px;margin:0 auto;padding:40px 60px 60px;color:#555;} /* reduced top padding */
+        /* Same column width & gutters as header-inner so section titles align under name */
+        main{max-width:1000px;margin:0 auto;padding:40px 20px 60px;color:#555;}
 
         /* About section layout */
         .about-wrapper{display:flex;flex-wrap:nowrap;gap:40px;align-items:flex-start;}
@@ -63,6 +42,7 @@
         /* ---- Responsiveness ---- */
         @media(max-width:768px){
             .header-inner{flex-direction:column;gap:10px;}
+            main{padding:30px 16px 50px;} /* slightly smaller gutters on mobile */
             .about-wrapper{flex-wrap:wrap;gap:24px;}
             .about-photo img{margin:0 auto;}
             .about-content{flex-basis:100%;}
@@ -107,18 +87,18 @@
             <p>
                 I am a Master’s student at the University of Michigan, Ann Arbor, specializing in Robotics and Autonomous
                 Vehicles. I completed my undergraduate degree in Mechanical Engineering at Walchand Institute of
-                Technology (WIT), affiliated with Solapur University in India.
+                Technology (WIT), Solapur University, India.
             </p>
             <p>
                 My research interests lie at the intersection of Computer Vision, Machine Learning, and Deep Learning for
                 Robotics, with a particular focus on Simultaneous Localization and Mapping (SLAM), Robot Navigation, and
-                Probabilistic Modeling in Robotics. I have worked extensively on projects involving scene understanding,
+                Probabilistic Modeling in Robotics. I have worked on projects involving scene understanding,
                 semantic mapping, 3D reconstruction, and uncertainty modeling for robotic perception. Additionally, I
                 have knowledge of state estimation techniques, multi‑modal sensor fusion, and optimization methods for
                 autonomous systems.
             </p>
             <p>
-                Currently, I am exploring Lie groups and Equivariant Deep Learning techniques to enhance perception and
+                Currently, I am studying Lie groups and Equivariant Deep Learning techniques for perception and
                 control frameworks in robotics. I am actively involved in research at the Computational Autonomy and
                 Robotics Laboratory (CURLY Lab) under the guidance of Professor Maani Ghaffari, where my work focuses on
                 Scene Graph‑Based Vision‑Language Navigation and Temporally Fused Scene Completion.

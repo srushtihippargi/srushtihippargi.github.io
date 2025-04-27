@@ -5,7 +5,7 @@
     <title>Srushti Hippargi</title>
     <style>
         /* ---- Base ---- */
-        *{box-sizing:border-box;}
+        *,*::before,*::after{box-sizing:border-box;}
         body{margin:0;font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:#222;line-height:1.6;}
         a{color:#004aad;text-decoration:none;}
         a:hover{text-decoration:underline;}
@@ -13,7 +13,7 @@
         /* ---- Top Navigation Bar ---- */
         header{
             width:100%;
-            background:#f2f2f2; /* light-grey strip */
+            background:#f2f2f2;
             padding:14px 40px;
             display:flex;
             justify-content:space-between;
@@ -23,14 +23,12 @@
             margin:0;
             font-size:1.75rem;
             font-weight:600;
-            color:#004aad; /* same blue as nav links */
+            color:#004aad;
         }
         .nav-links{
             list-style:none;
-            margin:0;
-            padding:0;
+            margin:0;padding:0;
             display:flex;
-            flex-wrap:wrap;
             gap:26px;
             font-weight:600;
         }
@@ -38,24 +36,36 @@
         /* ---- Main Content ---- */
         main{max-width:1000px;margin:0 auto;padding:40px 60px;}
 
-        /* About section */
-        .about-wrapper{display:flex;flex-wrap:wrap;align-items:flex-start;}
-        .about-wrapper img{width:180px;border-radius:8px;margin-right:40px;margin-bottom:20px;object-fit:cover;}
-        .about-content h1{margin:0 0 10px;font-size:2rem;font-weight:600;}
+        /* About section layout */
+        .about-wrapper{
+            display:flex;
+            flex-wrap:nowrap;
+            gap:40px;
+            align-items:flex-start;
+        }
+        .about-wrapper img{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            object-fit:cover;
+            flex-shrink:0;
+        }
+        .about-content{flex:1;}
         .about-content p{margin-top:0;}
+        .about-content h2{margin-top:0;}
         .social-links{margin-top:12px;}
         .social-links a{margin-right:12px;font-weight:500;}
 
         /* Section divider */
-        .section-divider{border:none;height:1px;width:100%;margin:60px 0 25px;background:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.4),rgba(0,0,0,0));}
+        .section-divider{border:none;height:1px;width:100%;margin:60px 0 25px;background:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.35),rgba(0,0,0,0));}
 
         h2{margin:0 0 20px;color:#002b5b;font-size:1.6rem;font-weight:600;}
 
         /* ---- Responsiveness ---- */
         @media(max-width:768px){
             header{flex-direction:column;align-items:flex-start;gap:10px;}
-            .about-wrapper{flex-direction:column;}
-            .about-wrapper img{margin-right:0;}
+            .about-wrapper{flex-wrap:wrap;gap:20px;}
+            .about-wrapper img{margin:0 auto;}
         }
     </style>
 </head>
@@ -79,13 +89,13 @@
         <h2 id="about">About</h2>
 
         <div class="about-wrapper">
-            <!-- ✨ Replace src with your uploaded photo path  -->
-            <img src="images/new_photo.png" alt="Srushti Hippargi profile" />
+            <!-- Update src if you saved the image with a different filename -->
+            <img src="assets/images/profile.jpg" alt="Srushti Hippargi profile" />
 
             <div class="about-content">
                 <p><strong>Email:</strong> srushti [at] umich [dot] edu</p>
 
-                <p>I am a Master’s student in Automotive Engineering at the University of Michigan, focusing on perception and controls for autonomous vehicles and robotics. My research spans 3D scene understanding, uncertainty‑aware deep learning, and real‑time robotics systems. Previously, I have worked on scene completion, robust SLAM, and Gaussian Splatting for dynamic environments.</p>
+                <p>I am a Master’s student in Automotive Engineering at the University of Michigan, focusing on perception and controls for autonomous vehicles and robotics. My research spans 3D scene understanding, uncertainty-aware deep learning, and real-time robotics systems. Previously, I have worked on scene completion, robust SLAM, and Gaussian Splatting for dynamic environments.</p>
 
                 <div class="social-links">
                     <a href="mailto:srushti@umich.edu">Email</a> |

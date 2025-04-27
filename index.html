@@ -12,40 +12,38 @@
 
         /* ---- Header ---- */
         header{width:100%;background:#f2f2f2;border-bottom:1px solid #e7e7e7;}
-        .header-inner{
-            max-width:1000px;             /* shared column width */
-            margin:0 auto;                /* center column */
-            padding:10px 20px;            /* horizontal gutters = 20px */
-            display:flex;align-items:center;justify-content:space-between;
-        }
+        .header-inner{max-width:1000px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;}
         header h1{margin:0;font-size:1.6rem;font-weight:600;color:#666;}
         .nav-links{list-style:none;margin:0;padding:0;display:flex;gap:24px;font-weight:500;font-size:0.85rem;}
         .nav-links li a{color:#888;transition:opacity 0.2s ease;}
         .nav-links li a:hover{opacity:0.7;}
 
-        /* ---- Main Content ---- */
-        /* Same column width & gutters as header-inner so section titles align under name */
+        /* ---- Main Content Grid ---- */
         main{max-width:1000px;margin:0 auto;padding:40px 20px 60px;color:#555;}
 
         /* About section layout */
-        .about-wrapper{display:flex;flex-wrap:nowrap;gap:40px;align-items:flex-start;}
+        .about-wrapper{display:flex;gap:40px;align-items:flex-start;}
         .about-photo figure{margin:0;}
         .about-photo img{width:220px;height:220px;border-radius:10px;object-fit:cover;display:block;}
         .photo-caption p{margin:3px 0;text-align:center;font-size:0.9rem;font-weight:400;color:#777;}
         .about-content{flex:1;}
-        .about-content p{margin-top:0;}
 
-        /* Section divider */
+        /* Section divider + titles */
         .section-divider{border:none;height:1px;width:100%;margin:50px 0 25px;background:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.35),rgba(0,0,0,0));}
         h2{margin:0 0 20px;color:#444;font-size:1.6rem;font-weight:600;}
+
+        /* ---- Research Item ---- */
+        .research-item{display:flex;gap:40px;align-items:flex-start;margin-bottom:45px;}
+        .research-images img{width:260px;border-radius:4px;margin-bottom:12px;display:block;}
+        .research-desc h3{margin:0 0 6px;font-size:1.05rem;font-weight:700;color:#222;}
+        .research-desc p{margin:0 0 12px;font-size:0.9rem;}
 
         /* ---- Responsiveness ---- */
         @media(max-width:768px){
             .header-inner{flex-direction:column;gap:10px;}
-            main{padding:30px 16px 50px;} /* slightly smaller gutters on mobile */
-            .about-wrapper{flex-wrap:wrap;gap:24px;}
-            .about-photo img{margin:0 auto;}
-            .about-content{flex-basis:100%;}
+            main{padding:30px 16px 50px;}
+            .about-wrapper,.research-item{flex-direction:column;gap:24px;}
+            .research-images img{width:100%;}
         }
     </style>
 </head>
@@ -69,7 +67,6 @@
     <!-- About Section -->
     <h2 id="about">About</h2>
     <div class="about-wrapper">
-        <!-- Photo & caption -->
         <div class="about-photo">
             <figure>
                 <img src="images/new_photo.png" alt="Srushti Hippargi portrait" />
@@ -81,53 +78,41 @@
                 </figcaption>
             </figure>
         </div>
-
-        <!-- Textual bio -->
         <div class="about-content">
-            <p>
-                I am a Master’s student at the University of Michigan, Ann Arbor, specializing in Robotics and Autonomous
-                Vehicles. I completed my undergraduate degree in Mechanical Engineering at Walchand Institute of
-                Technology (WIT), Solapur University, India.
-            </p>
-            <p>
-                My research interests lie at the intersection of Computer Vision, Machine Learning, and Deep Learning for
-                Robotics, with a particular focus on Simultaneous Localization and Mapping (SLAM), Robot Navigation, and
-                Probabilistic Modeling in Robotics. I have worked on projects involving scene understanding,
-                semantic mapping, 3D reconstruction, and uncertainty modeling for robotic perception. Additionally, I
-                have knowledge of state estimation techniques, multi‑modal sensor fusion, and optimization methods for
-                autonomous systems.
-            </p>
-            <p>
-                Currently, I am studying Lie groups and Equivariant Deep Learning techniques for perception and
-                control frameworks in robotics. I am actively involved in research at the Computational Autonomy and
-                Robotics Laboratory (CURLY Lab) under the guidance of Professor Maani Ghaffari, where my work focuses on
-                Scene Graph‑Based Vision‑Language Navigation and Temporally Fused Scene Completion.
-            </p>
+            <p>I am a Master’s student at the University of Michigan, Ann Arbor, specializing in Robotics and Autonomous Vehicles. My research interests span 3D scene understanding, probabilistic modeling, and uncertainty‑aware deep learning for robotic perception.</p>
         </div>
     </div>
 
-    <!-- Divider & Research -->
+    <!-- Research Section -->
     <hr class="section-divider" />
     <h2 id="research">Research</h2>
-    <p>(Add your research projects here.)</p>
 
-    <!-- Divider & Projects -->
+    <div class="research-item">
+        <div class="research-images">
+            <img src="images/ssc.png" alt="Scene completion visualization – depth map" />
+            <img src="images/ss2.png" alt="Scene completion visualization – textured result" />
+        </div>
+        <div class="research-desc">
+            <h3>BEV‑Temporal Fusion based Scene Completion on LiDAR data</h3>
+            <p><em>Research Assistant, CURLY Lab (May&nbsp;2024&nbsp;–&nbsp;2025)</em></p>
+            <p>Integrated FuseNet LSTM/UNet architectures into LMSCNet for BEV‑based temporal fusion. Developed local 3D mapping with a voxel‑based sliding‑window approach for dynamic scene completion and incorporated uncertainty and confidence into the model.</p>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
     <hr class="section-divider" />
     <h2 id="projects">Projects</h2>
     <p>(Add your project descriptions here.)</p>
 
-    <!-- Divider & Education -->
+    <!-- Education Section -->
     <hr class="section-divider" />
     <h2 id="education">Education</h2>
     <p>(Add your education details here.)</p>
 
-    <!-- Divider & Contact -->
+    <!-- Contact Section -->
     <hr class="section-divider" />
     <h2 id="contact">Contact</h2>
-    <p>
-        Feel free to reach out via <a href="mailto:shipparg@umich.edu">email</a> or connect with me on
-        <a href="https://www.linkedin.com/in/srushtihippargi" target="_blank">LinkedIn</a>.
-    </p>
+    <p>Feel free to reach out via <a href="mailto:shipparg@umich.edu">email</a> or connect with me on <a href="https://www.linkedin.com/in/srushtihippargi" target="_blank">LinkedIn</a>.</p>
 </main>
 
 </body>

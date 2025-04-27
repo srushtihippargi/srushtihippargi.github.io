@@ -5,107 +5,57 @@
     <title>Srushti Hippargi</title>
     <style>
         /* ---- Base ---- */
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-            color: #222;
-            line-height: 1.6;
-        }
-        a {
-            color: #004aad;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+        *{box-sizing:border-box;}
+        body{margin:0;font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:#222;line-height:1.6;}
+        a{color:#004aad;text-decoration:none;}
+        a:hover{text-decoration:underline;}
 
         /* ---- Top Navigation Bar ---- */
-        header {
-            width: 100%;
-            background: #f2f2f2; /* light‑grey strip */
-            padding: 14px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        header{
+            width:100%;
+            background:#f2f2f2; /* light-grey strip */
+            padding:14px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
         }
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 26px;
-            font-weight: 600;
+        header h1{
+            margin:0;
+            font-size:1.75rem;
+            font-weight:600;
+            color:#004aad; /* same blue as nav links */
+        }
+        .nav-links{
+            list-style:none;
+            margin:0;
+            padding:0;
+            display:flex;
+            flex-wrap:wrap;
+            gap:26px;
+            font-weight:600;
         }
 
         /* ---- Main Content ---- */
-        main {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 60px;
-        }
+        main{max-width:1000px;margin:0 auto;padding:40px 60px;}
 
         /* About section */
-        .about-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-        }
-        .about-wrapper img {
-            width: 180px;
-            border-radius: 8px;
-            margin-right: 40px;
-            margin-bottom: 20px;
-            object-fit: cover;
-        }
-        .about-content h1 {
-            margin: 0 0 10px;
-            font-size: 2rem;
-            font-weight: 600;
-        }
-        .about-content p {
-            margin-top: 0;
-        }
-        .social-links {
-            margin-top: 12px;
-        }
-        .social-links a {
-            margin-right: 12px;
-            font-weight: 500;
-        }
+        .about-wrapper{display:flex;flex-wrap:wrap;align-items:flex-start;}
+        .about-wrapper img{width:180px;border-radius:8px;margin-right:40px;margin-bottom:20px;object-fit:cover;}
+        .about-content h1{margin:0 0 10px;font-size:2rem;font-weight:600;}
+        .about-content p{margin-top:0;}
+        .social-links{margin-top:12px;}
+        .social-links a{margin-right:12px;font-weight:500;}
 
-        /* Section divider (subtle gradient line) */
-        .section-divider {
-            border: none;
-            height: 1px;
-            width: 100%;
-            margin: 60px 0 25px;
-            background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0));
-        }
+        /* Section divider */
+        .section-divider{border:none;height:1px;width:100%;margin:60px 0 25px;background:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.4),rgba(0,0,0,0));}
 
-        h2 {
-            margin: 0 0 20px;
-            color: #002b5b;
-            font-size: 1.6rem;
-            font-weight: 600;
-        }
+        h2{margin:0 0 20px;color:#002b5b;font-size:1.6rem;font-weight:600;}
 
         /* ---- Responsiveness ---- */
-        @media(max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-            .about-wrapper {
-                flex-direction: column;
-            }
-            .about-wrapper img {
-                margin-right: 0;
-            }
+        @media(max-width:768px){
+            header{flex-direction:column;align-items:flex-start;gap:10px;}
+            .about-wrapper{flex-direction:column;}
+            .about-wrapper img{margin-right:0;}
         }
     </style>
 </head>
@@ -113,7 +63,7 @@
 
     <!-- Top grey bar with name and horizontal nav -->
     <header>
-        <h1 style="margin:0;font-size:1.75rem;font-weight:600;">Srushti Hippargi</h1>
+        <h1>Srushti Hippargi</h1>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#research">Research</a></li>
@@ -125,8 +75,7 @@
     </header>
 
     <main>
-        <!-- Section divider & About heading -->
-        <hr class="section-divider">
+        <!-- About heading -->
         <h2 id="about">About</h2>
 
         <div class="about-wrapper">
@@ -136,8 +85,7 @@
             <div class="about-content">
                 <p><strong>Email:</strong> srushti [at] umich [dot] edu</p>
 
-                <p><!-- Write your “about me” paragraph(s) here -->
-                I am a Master’s student in Automotive Engineering at the University of Michigan, focusing on perception and controls for autonomous vehicles and robotics. My research spans 3D scene understanding, uncertainty‑aware deep learning, and real‑time robotics systems. Previously, I have worked on scene completion, robust SLAM, and Gaussian Splatting for dynamic environments.</p>
+                <p>I am a Master’s student in Automotive Engineering at the University of Michigan, focusing on perception and controls for autonomous vehicles and robotics. My research spans 3D scene understanding, uncertainty‑aware deep learning, and real‑time robotics systems. Previously, I have worked on scene completion, robust SLAM, and Gaussian Splatting for dynamic environments.</p>
 
                 <div class="social-links">
                     <a href="mailto:srushti@umich.edu">Email</a> |

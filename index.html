@@ -38,6 +38,11 @@
         .research-desc h3{margin:0 0 6px;font-size:1.05rem;font-weight:700;color:#777;}
         .research-desc p{margin:0 0 12px;font-size:0.9rem;}
 
+        /* ---- Education rows ---- */
+        .edu-row{display:flex;align-items:center;margin-bottom:9px;}
+        .edu-row img{width:40px;margin-right:10px;}
+        .edu-row span{display:block;line-height:1;}
+
         /* ---- Responsiveness ---- */
         @media(max-width:768px){
             .header-inner{flex-direction:column;gap:10px;}
@@ -136,9 +141,26 @@
     <p>(Add your project descriptions here.)</p>
 
     <!-- Education Section -->
-    <hr class="section-divider" />
-    <h2 id="education">Education</h2>
-    <p>(Add your education details here.)</p>
+    <section class="container" id="education">
+        <hr class="section-divider" />
+        <h2 class="col-12 px-0 mb-0">Education</h2>
+
+        <div class="edu-row">
+            <img src="images/umich.png" alt="UMich Logo" />
+            <div>
+                <span style="font-size:14px;">M.S. Automotive Engineering (Robotics &amp; Autonomous Vehicles), University of Michigan, Ann Arbor</span>
+                <span style="font-size:12px;">Aug&nbsp;2023&nbsp;–&nbsp;Apr&nbsp;2025</span>
+            </div>
+        </div>
+
+        <div class="edu-row">
+            <img src="images/wit.png" alt="WIT Logo" />
+            <div>
+                <span style="font-size:14px;">B.E. Mechanical Engineering, Walchand Institute of Technology, Solapur University (India)</span>
+                <span style="font-size:12px;">Aug&nbsp;2016&nbsp;–&nbsp;Apr&nbsp;2020</span>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <hr class="section-divider" />

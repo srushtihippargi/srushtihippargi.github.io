@@ -19,106 +19,102 @@
             justify-content:space-between;
             align-items:center;
         }
-        header h1{
-            margin:0;
-            font-size:1.75rem;
-            font-weight:600;
-            color:#004aad;
-        }
-        .nav-links{
-            list-style:none;
-            margin:0;padding:0;
-            display:flex;
-            gap:26px;
-            font-weight:600;
-        }
+        header h1{margin:0;font-size:1.75rem;font-weight:600;color:#004aad;}
+        .nav-links{list-style:none;margin:0;padding:0;display:flex;gap:26px;font-weight:600;}
 
         /* ---- Main Content ---- */
         main{max-width:1000px;margin:0 auto;padding:40px 60px;}
 
         /* About section layout */
-        .about-wrapper{
-            display:flex;
-            flex-wrap:nowrap;
-            gap:40px;
-            align-items:flex-start;
+        .about-wrapper{display:flex;flex-wrap:nowrap;gap:40px;align-items:flex-start;}
+        .about-photo figure{margin:0;}
+        .about-photo img{
+            width:220px;height:auto;border-radius:10px;object-fit:cover;display:block;
         }
-        .about-wrapper img{width:180px;border-radius:50%;margin-right:40px;margin-bottom:20px;object-fit:cover;}
+        .photo-caption p{
+            margin:3px 0;text-align:center;font-size:0.9rem;font-weight:400;color:#444;
+        }
         .about-content{flex:1;}
         .about-content p{margin-top:0;}
-        .about-content h2{margin-top:0;}
         .social-links{margin-top:12px;}
         .social-links a{margin-right:12px;font-weight:500;}
 
         /* Section divider */
         .section-divider{border:none;height:1px;width:100%;margin:60px 0 25px;background:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.35),rgba(0,0,0,0));}
-
         h2{margin:0 0 20px;color:#002b5b;font-size:1.6rem;font-weight:600;}
 
         /* ---- Responsiveness ---- */
         @media(max-width:768px){
             header{flex-direction:column;align-items:flex-start;gap:10px;}
             .about-wrapper{flex-wrap:wrap;gap:20px;}
-            .about-wrapper img{margin:0 auto;}
+            .about-photo img{margin:0 auto;}
+            .about-content{flex-basis:100%;}
         }
     </style>
 </head>
 <body>
 
-    <!-- Top grey bar with name and horizontal nav -->
-    <header>
-        <h1>Srushti Hippargi</h1>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="assets/pdf/Srushti_Hippargi_CV.pdf" target="_blank">CV</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </header>
+<header>
+    <h1>Srushti Hippargi</h1>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="assets/pdf/Srushti_Hippargi_CV.pdf" target="_blank">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</header>
 
-    <main>
-        <!-- About heading -->
-        <h2 id="about">About</h2>
-
-        <div class="about-wrapper">
-            <!-- Update src if you saved the image with a different filename -->
-            <img src="images/new_photo.png" alt="Srushti Hippargi profile" />
-
-            <div class="about-content">
-<!--                 <p><strong>Email:</strong> srushti [at] umich [dot] edu</p> -->
-
-                <p>I am a Master’s student in Automotive Engineering at the University of Michigan, focusing on perception and controls for autonomous vehicles and robotics. My research spans 3D scene understanding, uncertainty-aware deep learning, and real-time robotics systems. Previously, I have worked on scene completion, robust SLAM, and Gaussian Splatting for dynamic environments.</p>
-
-                <div class="social-links">
-                    <a href="mailto:srushti@umich.edu">Email</a> |
-                    <a href="https://twitter.com/your_twitter" target="_blank">Twitter</a> |
-                    <a href="https://github.com/srushtihippargi" target="_blank">Github</a>
-                </div>
-            </div>
+<main>
+    <!-- About Section -->
+    <h2 id="about">About</h2>
+    <div class="about-wrapper">
+        <!-- Photo & caption -->
+        <div class="about-photo">
+            <figure>
+                <img src="assets/images/profile.jpg" alt="Srushti Hippargi portrait">
+                <figcaption class="photo-caption">
+                    <p>srushti hippargi</p>
+                    <p>master's student</p>
+                    <p><a href="https://umich.edu/" target="_blank">university of michigan, ann arbor, usa</a></p>
+                    <p>email: shipparg@umich.edu</p>
+                </figcaption>
+            </figure>
         </div>
 
-        <!-- Divider & Research -->
-        <hr class="section-divider">
-        <h2 id="research">Research</h2>
-        <p>(Add your research projects here.)</p>
+        <!-- Textual bio -->
+        <div class="about-content">
+            <p>I am a Master’s student in Automotive Engineering at the University of Michigan, focusing on perception and controls for autonomous vehicles and robotics. My research spans 3D scene understanding, uncertainty‑aware deep learning, and real‑time robotics systems. Previously, I have worked on scene completion, robust SLAM, and Gaussian Splatting for dynamic environments.</p>
 
-        <!-- Divider & Projects -->
-        <hr class="section-divider">
-        <h2 id="projects">Projects</h2>
-        <p>(Add your project descriptions here.)</p>
+            <div class="social-links">
+                <a href="mailto:shipparg@umich.edu">Email</a> |
+                <a href="https://twitter.com/your_twitter" target="_blank">Twitter</a> |
+                <a href="https://github.com/srushtihippargi" target="_blank">Github</a>
+            </div>
+        </div>
+    </div>
 
-        <!-- Divider & Education -->
-        <hr class="section-divider">
-        <h2 id="education">Education</h2>
-        <p>(Add your education details here.)</p>
+    <!-- Divider & Research -->
+    <hr class="section-divider">
+    <h2 id="research">Research</h2>
+    <p>(Add your research projects here.)</p>
 
-        <!-- Divider & Contact -->
-        <hr class="section-divider">
-        <h2 id="contact">Contact</h2>
-        <p>Feel free to reach out via <a href="mailto:srushti@umich.edu">email</a> or connect with me on <a href="https://www.linkedin.com/in/srushtihippargi" target="_blank">LinkedIn</a>.</p>
-    </main>
+    <!-- Divider & Projects -->
+    <hr class="section-divider">
+    <h2 id="projects">Projects</h2>
+    <p>(Add your project descriptions here.)</p>
+
+    <!-- Divider & Education -->
+    <hr class="section-divider">
+    <h2 id="education">Education</h2>
+    <p>(Add your education details here.)</p>
+
+    <!-- Divider & Contact -->
+    <hr class="section-divider">
+    <h2 id="contact">Contact</h2>
+    <p>Feel free to reach out via <a href="mailto:shipparg@umich.edu">email</a> or connect with me on <a href="https://www.linkedin.com/in/srushtihippargi" target="_blank">LinkedIn</a>.</p>
+</main>
 
 </body>
 </html>

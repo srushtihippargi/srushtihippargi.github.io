@@ -38,6 +38,13 @@
         .research-desc h3{margin:0 0 6px;font-size:1.05rem;font-weight:700;color:#777;}
         .research-desc p{margin:0 0 12px;font-size:0.9rem;}
 
+        .project-item { display: flex; flex-direction: row; gap: 40px; align-items: flex-start; margin-bottom: 45px; flex-wrap: wrap; } 
+        .project-images { display: flex; gap: 12px; flex-wrap: wrap; } 
+        .project-images img { width: 180px; height: 160px; border-radius: 4px; margin-bottom: 12px; display: block; object-fit: cover; } 
+        .project-desc h3 { margin: 0 0 6px; font-size: 1.05rem; font-weight: 700; color: #777; } 
+        .project-desc p { margin: 0 0 12px; font-size: 0.9rem; }
+
+
         /* ---- Education rows ---- */
         .edu-row{display:flex;align-items:center;margin-bottom:9px;}
         .edu-row img{width:40px;margin-right:10px;}
@@ -98,9 +105,8 @@
                 autonomous systems.
             </p>
             <p>
-                Currently, I am studying Lie groups and Equivariant Deep Learning techniques for perception and
-                control frameworks in robotics. I am actively involved in research at the Computational Autonomy and
-                Robotics Laboratory (CURLY Lab) under the guidance of Professor Maani Ghaffari, where my work focuses on
+                Currently, I am actively involved in research at the Computational Autonomy and
+                Robotics Laboratory (CURLY Lab) of Professor Maani Ghaffari, where my work focuses on
                 Scene Graph‑Based Vision‑Language Navigation and Temporally Fused Scene Completion.
             </p>
         </div>
@@ -113,7 +119,7 @@
     <div class="research-item">
         <div class="research-images">
             <img src="we/1/ssc.png" alt="Scene completion visualization – depth map" />
-            <img src="we/1/ssc2.gif" alt="Scene completion visualization – textured result" />
+            <img src="we/1/ssc.gif" alt="Scene completion visualization – textured result" />
         </div>
         <div class="research-desc">
             <h3>BEV‑Temporal Fusion based Scene Completion on LiDAR data</h3>
@@ -134,10 +140,34 @@
         </div>
     </div>
 
+    <div class="research-item">
+        <div class="research-images">
+            <img src="we/3/mcity.png" alt="Scene completion visualization – depth map" />
+            <img src="we/3/mcity2.png" alt="Scene completion visualization – textured result" />
+        </div>
+        <div class="research-desc">
+            <h3>Digital Twin Creation of MCity using Gaussian Splatting and Multi-View Capture</h3>
+            <p><em>Reserch Cohort, Capoom, Techlab at Mcity (Jan&nbsp;2024&nbsp;–August&nbsp;2024)</em></p>
+            <p>Designed a parallel‑capture pipeline with eight calibrated Lucid cameras on a Mach‑E, synchronizing 30 Hz frames via custom Python scripts to acquire dense, time‑aligned imagery of the 32‑acre MCity track. Leveraged GPU‑accelerated Gaussian Splatting to reconstruct a centimeter‑accurate 3D digital twin, slashing build time 4× versus COLMAP baselines and enabling rapid prototyping.</p>
+        </div>
+    </div>
+
     <!-- Projects Section -->
     <hr class="section-divider" />
     <h2 id="projects">Projects</h2>
-    <p>(Add your project descriptions here.)</p>
+
+    <div class="project-item">
+        <div class="project-images">
+            <img src="we/ground.gif" alt="Faster R-CNN detection output" />
+            <img src="we/side.gif" alt="Faster R-CNN detection output" />
+            <img src="we/none.gif" alt="Faster R-CNN detection output" />
+        </div>
+        <div class="project-desc">
+            <h3>Reinforcement Learning Based Adaptive Grasping</h3>
+            <p>Developed and trained distinct RL-based policies for ground, side, and unoccluded grasps in MuJoCo, achieving a 100% simulated success rate across all occlusion types. Evaluated two policy selection strategies—box-size heuristics and Q-maximization—demonstrating robust grasp execution under partial visibility conditions.</p>
+        </div>
+    </div>
+
 
     <!-- Education Section -->
     <section class="container" id="education">

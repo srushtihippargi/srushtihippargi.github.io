@@ -34,13 +34,15 @@
 
         /* ---- Research Item ---- */
         .research-item{display:flex;gap:40px;align-items:flex-start;margin-bottom:45px;}
-        .research-images img{width:360px;height:260px;border-radius:4px;margin-bottom:12px;display:block;}
+        .research-images img{width:360px;height:260px;border-radius:4px;margin-bottom:12px;display:block;border: 2px solid #ccc; padding: 4px;background-color: #fafafa;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);transition: transform 0.2s ease;} 
+        .research-images img:hover {transform: scale(1.02);}
         .research-desc h3{margin:0 0 6px;font-size:1.05rem;font-weight:700;color:#222;}
         .research-desc p{margin:0 0 12px;font-size:0.9rem;}
 
         .project-item { display: flex; flex-direction: row; gap: 40px; align-items: flex-start; margin-bottom: 60px; flex-wrap: nowrap; } 
         .project-images { flex-shrink: 0; display: flex; flex-direction: column; gap: 12px; } 
-        .project-images img { width: 360px; height: 160px; border-radius: 6px; display: block; } 
+        .project-images img { width: 360px; height: 160px; border-radius: 6px; display: block;border: 2px solid #ccc; padding: 4px;background-color: #fafafa;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);transition: transform 0.2s ease;} 
+        .project-images img:hover {transform: scale(1.02);}
         .project-desc { flex: 1; } 
         .project-desc h3 { margin: 0 0 10px; font-size: 1.2rem; font-weight: 700; color: #222; } 
         .project-desc p { margin: 0 0 12px; font-size: 0.95rem; }
@@ -87,8 +89,8 @@
                 <figcaption class="photo-caption">
                     <p>Srushti Hippargi</p>
                     <p>Master's Student</p>
-                    <p><a href="https://umich.edu/" target="_blank">University of Michigan, Ann Arbor, USA</a></p>
-                    <p><a href="mailto:shipparg@umich.edu">email: shipparg@umich.edu</a></p>
+                    <p><a href="https://umich.edu/" target="_blank">University of Michigan, Ann Arbor</a></p>
+<!--                     <p><a href="mailto:shipparg@umich.edu">email: shipparg@umich.edu</a></p> -->
                 </figcaption>
             </figure>
         </div>
@@ -111,6 +113,7 @@
                 Robotics Laboratory (CURLY Lab) of Professor Maani Ghaffari, where my work focuses on
                 Scene Graph‑Based Vision‑Language Navigation and Temporally Fused Scene Completion.
             </p>
+             <p><a href="mailto:shipparg@umich.edu">Email</a> | <a href="https://github.com/srushtihippargi">GitHub</a> | <a href="https://www.linkedin.com/in/srushtihippargi/">LinkedIn</a></p>
         </div>
     </div>
 
@@ -136,7 +139,7 @@
             <img src="we/2/mcity_dyn_gs.gif" alt="Scene completion visualization – textured result" />
         </div>
         <div class="research-desc">
-            <h3>Dynamic 3D Reconstruction with Gaussian Splatting and Scene Flow Estimations</h3>
+            <h3>Dynamic 3D Reconstruction with Gaussian Splatting and Scene Flow Estimation</h3>
             <p><em>Robotics Intern, ROAHM Lab (May&nbsp;2024&nbsp;–&nbsp;2025)</em></p>
             <p>Developed a dynamic Gazebo simulation with multi-view cameras and 3D LiDAR, visualized in ROS2 and RViz. Performed 3D/4D Gaussian splatting for warehouse reconstruction, optimized sensor placement, and integrated rigid scene flow for dynamic consistency.</p>
         </div>
@@ -150,7 +153,8 @@
         <div class="research-desc">
             <h3>Digital Twin Creation of MCity using Gaussian Splatting and Multi-View Capture</h3>
             <p><em>Reserch Cohort, Capoom, Techlab at Mcity (Jan&nbsp;2024&nbsp;–August&nbsp;2024)</em></p>
-            <p>Designed a parallel‑capture pipeline with eight calibrated Lucid cameras on a Mach‑E, synchronizing 30 Hz frames via custom Python scripts to acquire dense, time‑aligned imagery of the 32‑acre MCity track. Leveraged GPU‑accelerated Gaussian Splatting to reconstruct a centimeter‑accurate 3D digital twin, slashing build time 4× versus COLMAP baselines and enabling rapid prototyping.</p>
+            <p>Designed a parallel‑capture pipeline with eight calibrated Lucid cameras on a Mach‑E, synchronizing 30 Hz frames. Leveraged GPU‑accelerated Gaussian Splatting to reconstruct a centimeter‑accurate 3D digital twin, slashing build time 4× versus COLMAP baselines.</p>
+<!--             Designed a parallel‑capture pipeline with eight calibrated Lucid cameras on a Mach‑E, synchronizing 30 Hz frames via custom Python scripts to acquire dense, time‑aligned imagery of the 32‑acre MCity track. Leveraged GPU‑accelerated Gaussian Splatting to reconstruct a centimeter‑accurate 3D digital twin, slashing build time 4× versus COLMAP baselines and enabling rapid prototyping -->
         </div>
     </div>
 
@@ -168,6 +172,29 @@
             <p>Developed and trained distinct RL-based policies for ground, side, and unoccluded grasps in MuJoCo, achieving a 100% simulated success rate across all occlusion types. Evaluated two policy selection strategies—box-size heuristics and Q-maximization—demonstrating robust grasp execution under partial visibility conditions.</p>
         </div>
     </div>
+
+     <div class="project-item">
+        <div class="project-images">
+            <img src="p/gcnn.png" alt="Faster R-CNN detection output" />
+        </div>
+        <div class="project-desc">
+            <h3>GCNN-based Deep Loop Closure Detection for SLAM</h3>
+            <p><a href="https://github.com/srushtihippargi/LCDNet-GCNN">Code</a></p>
+            <p>Extended the LCDNet architecture by integrating Cyclic Group Convolutional Neural Networks (GCNNs) to enable rotation-invariant loop closure detection. Evaluated on symmetric scenes in KITTI-360, the method improved translational and rotational accuracy.</p>
+        </div>
+    </div>
+
+     <div class="project-item">
+        <div class="project-images">
+            <img src="p/ana.png" alt="Faster R-CNN detection output" />
+        </div>
+        <div class="project-desc">
+            <h3>Anytime Path Planning for time-Critical Robot Navigation Using ANA*</h3>
+            <p><a href="https://github.com/srushtihippargi/Search-Based-Planning">Code</a></p>
+            <p>Implemented and compared A* and ANA* algorithms for 8-connected grid-based robotic navigation with orientation and obstacle handling. Demonstrated that ANA* rapidly generates feasible paths and refines them over time, making it ideal for real-time, time-constrained applications such as doorway traversal with PR2.</p>
+        </div>
+    </div>
+
     
     <div class="project-item">
         <div class="project-images">

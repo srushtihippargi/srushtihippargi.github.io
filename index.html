@@ -19,7 +19,7 @@
         .nav-links li a:hover{opacity:0.7;}
 
         /* ---- Main Content Grid ---- */
-        main{max-width:1000px;margin:0 auto;padding:40px 20px 60px;color:#555;}
+        main{max-width:1000px;margin:0 auto;padding:40px 20px 60px;color:#222;}
 
         /* About section layout */
         .about-wrapper{display:flex;gap:40px;align-items:flex-start;}
@@ -53,6 +53,29 @@
         .edu-row{display:flex;align-items:center;margin-bottom:9px;}
         .edu-row img{width:40px;margin-right:10px;}
         .edu-row span{display:block;line-height:1;}
+
+
+        /* ---- Contact Icons ---- */
+        .contact-icons {display: flex;gap: 20px;padding-top: 10px;margin-top: 10px;
+        }
+        .contact-icons a {display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            font-size: 22px;
+            color: #004aad;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .contact-icons a:hover {
+            background-color: #004aad;
+            color: white;
+            transform: translateY(-2px);
+        }
 
         /* ---- Responsiveness ---- */
         @media(max-width:768px){
@@ -120,7 +143,7 @@
         </div>
         <div class="research-desc">
             <h3>BEV‑Temporal Fusion based Scene Completion on LiDAR data</h3>
-            <p><em>Research Assistant, CURLY Lab (May&nbsp;2024&nbsp;–Present&nbsp;)</em></p>
+            <p><em><a href="https://curly.engin.umich.edu/">Research Assistant, CURLY Lab (May&nbsp;2024&nbsp;–Present&nbsp;)</a></em></p>
             <p>Integrated FuseNet LSTM/UNet architectures into LMSCNet for BEV‑based temporal fusion. Developed local 3D mapping with a voxel‑based sliding‑window approach for dynamic scene completion and incorporated uncertainty and confidence into the model.</p>
         </div>
     </div>
@@ -132,7 +155,7 @@
         </div>
         <div class="research-desc">
             <h3>Dynamic 3D Reconstruction with Gaussian Splatting and Scene Flow Estimation</h3>
-            <p><em>Robotics Intern, ROAHM Lab (May&nbsp;2024&nbsp;–&nbsp;2025)</em></p>
+            <p><em><a href="https://www.roahmlab.com/">Robotics Intern, ROAHM Lab (May&nbsp;2024&nbsp;–&nbsp;2025)</a></em></p>
             <p>Developed a dynamic Gazebo simulation with multi-view cameras and 3D LiDAR, visualized in ROS2 and RViz. Performed 3D/4D Gaussian splatting for warehouse reconstruction, optimized sensor placement, and integrated rigid scene flow for dynamic consistency.</p>
         </div>
     </div>
@@ -144,7 +167,7 @@
         </div>
         <div class="research-desc">
             <h3>Digital Twin Creation of MCity using Gaussian Splatting and Multi-View Capture</h3>
-            <p><em>Reserch Cohort, Capoom, Techlab at Mcity (Jan&nbsp;2024&nbsp;–August&nbsp;2024)</em></p>
+            <p><em><a href="https://www.capoom.com/">Reserch Cohort, Capoom, Techlab at Mcity (Jan&nbsp;2024&nbsp;–August&nbsp;2024)</a></em></p>
             <p>Designed a parallel‑capture pipeline with eight calibrated Lucid cameras on a Mach‑E, synchronizing 30 Hz frames. Leveraged GPU‑accelerated Gaussian Splatting to reconstruct a centimeter‑accurate 3D digital twin, slashing build time 4× versus COLMAP baselines.</p>
 <!--             Designed a parallel‑capture pipeline with eight calibrated Lucid cameras on a Mach‑E, synchronizing 30 Hz frames via custom Python scripts to acquire dense, time‑aligned imagery of the 32‑acre MCity track. Leveraged GPU‑accelerated Gaussian Splatting to reconstruct a centimeter‑accurate 3D digital twin, slashing build time 4× versus COLMAP baselines and enabling rapid prototyping -->
         </div>
@@ -245,9 +268,19 @@
     </section>
 
     <!-- Contact Section -->
+
+
+     <!-- Contact Section -->
     <hr class="section-divider" />
     <h2 id="contact">Contact</h2>
-    <p>Feel free to reach out via <a href="mailto:shipparg@umich.edu">email</a> or connect with me on <a href="https://www.linkedin.com/in/srushtihippargi" target="_blank">LinkedIn</a>.</p>
+    <div class="contact-icons">
+        <a href="mailto:shipparg@umich.edu" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/srushtihippargi" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/srushtihippargi" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+<!--     <hr class="section-divider" /> -->
+<!--     <h2 id="contact">Contact</h2> -->
+<!--     <p>Feel free to reach out via <a href="mailto:shipparg@umich.edu">email</a> or connect with me on <a href="https://www.linkedin.com/in/srushtihippargi" target="_blank">LinkedIn</a>.</p> -->
 </main>
 
 </body>
